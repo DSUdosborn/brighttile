@@ -32,20 +32,17 @@ input.onButtonPressed(Button.AB, function () {
     }
 })
 input.onButtonPressed(Button.B, function () {
-    brightLevel += (10 * brightWay)
+    brightLevel += (20)
     tileDisplay.setBrightness(brightLevel)    
-    if (brightLevel > 241 && brightWay > 0 ) {
-        brightWay = -1
+    if (brightLevel > 241 ) {
+        brightLevel = 10
     } 
-    if (brightLevel < 11 && brightWay < 0) {
-        brightWay = 1   
-    }    
+    tileDisplay.show()   
 })
 
 
 let tileDisplay: Kitronik_Zip_Tile.ZIPTileDisplay = null
 let brightLevel = 10
-let brightWay = 1
 let colourFlag = 0
 let rainbowFlag = 0
 rainbowFlag = 1
